@@ -1,0 +1,47 @@
+.hero {
+  min-height: 562px;
+  margin-top: -1px;
+  background-color: $header-bg;
+}
+
+.hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__text {
+  width: 40%;
+  padding: 62px 0 0 73px;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    @include clear-content(15px);
+    @include font(52px, 60px);
+    @include head-font;
+    color: $white;
+  }
+
+  p,
+  span {
+    @include clear-content(0);
+    @include font(16px, 24px);
+    font-weight: 400;
+    color: $brown-text;
+  }
+
+  p {
+    padding-right: 20px;
+  }
+
+  span {
+    margin-bottom: 18px;
+    order: -1;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

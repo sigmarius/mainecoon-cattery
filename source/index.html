@@ -6,13 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="Site description" />
-  <title>Стартовый шаблон</title>
+  <title>Питомник Мейн-Кунов</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <a class="page-header__logo" aria-label="Логотип питомника Мейн-Кунов">
+      <svg width="55" height="25">
+        <use xlink:href="#icon-logo"></use>
+      </svg>
+    </a>
+  </header>
+
+  <main class="page-content">
+    <section class="hero">
+      <div class="hero__wrapper wrapper">
+        <div class="hero__text">
+          <h1>Питомник Мейн-Кунов</h1>
+          <p>Первый питомник с расширенным спектром&nbsp;услуг</p>
+          <span>Новосибирск</span>
+        </div>
+        <picture>
+          <!-- 1x: 710px; 2x: 1420px -->
+          <source srcset="img/hero-cat-desktop@1x.webp 1x, img/hero-cat-desktop@2x.webp 2x" type="image/webp" />
+          <!-- 1x: 270px; 2x: 540px -->
+          <img class="hero__image" src="img/hero-cat-desktop@1x.png" srcset="img/hero-cat-desktop@2x.png 2x" width="710"
+            height="684" alt="Пушистый красавчик Мейн-Кун" />
+        </picture>
+      </div>
+    </section>
+  </main>
 
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>

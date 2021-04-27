@@ -1,0 +1,12 @@
+.page-header {
+  padding: 47px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $header-bg;
+}
+
+.page-header__logo svg {
+  fill: $brown-text;
+  stroke: $bg-light;
+}

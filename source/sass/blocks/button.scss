@@ -1,0 +1,33 @@
+.button {
+  @include font(14px, 16px);
+  min-height: 52px;
+  min-width: 200px;
+
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+
+  font-weight: 700;
+  color: $white;
+  background-color: transparent;
+  border: 0.5px solid $brown-text;
+
+  &:hover,
+  &:focus {
+    color: $bg-dark;
+    background-color: $brown-text;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: $mobile) {
+  .button {
+    @include font(12px, 14px);
+    min-height: 40px;
+    min-width: 143px;
+  }
+
+}

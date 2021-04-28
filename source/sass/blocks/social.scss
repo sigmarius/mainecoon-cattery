@@ -1,0 +1,24 @@
+.social {
+  @include clear-list;
+  display: flex;
+}
+
+.social__link {
+  svg {
+    fill: $white;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $brown-text;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $brown-text;
+      opacity: 0.6;
+    }
+  }
+}

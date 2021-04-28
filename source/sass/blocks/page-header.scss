@@ -10,3 +10,16 @@
   fill: $brown-text;
   stroke: $bg-light;
 }
+
+
+@media (max-width: $tablet) {
+  .page-header {
+    padding: 28px 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-header {
+    padding: 25px 0;
+  }
+}

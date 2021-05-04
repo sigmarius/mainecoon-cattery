@@ -4,18 +4,19 @@
   list-style: none;
 }
 
-@mixin clear-content ($margin-bottom) {
+@mixin clear-content($margin-bottom) {
   margin: 0;
   margin-bottom: $margin-bottom;
   padding: 0;
 }
 
-@mixin font ($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
 @mixin head-font {
   font-family: $accent-font;
   font-weight: 400;
+  color: $white;
+}
+
+@mixin font($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
 }

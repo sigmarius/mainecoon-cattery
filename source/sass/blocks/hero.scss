@@ -10,6 +10,7 @@
 }
 
 .hero__text {
+  position: relative;
   width: 40%;
   padding: 62px 0 0 73px;
   display: flex;
@@ -19,7 +20,6 @@
     @include clear-content(15px);
     @include font(52px, 60px);
     @include head-font;
-    color: $white;
   }
 
   p,
@@ -27,16 +27,17 @@
     @include clear-content(0);
     @include font(16px, 24px);
     font-weight: 400;
-    color: $brown-text;
   }
 
   p {
     margin-bottom: 50px;
     padding-right: 20px;
+    color: $brown-text;
   }
 
   span {
     margin-bottom: 18px;
+    color: $brown-text;
     order: -1;
   }
 }
@@ -47,8 +48,8 @@
 
 .hero__social {
   position: absolute;
-  bottom: 48px;
-  left: 80px;
+  bottom: -126px;
+  left: -51px;
   flex-direction: column;
   align-items: center;
 
@@ -75,9 +76,9 @@
 }
 
 
-@media (min-width: $desktop) and (max-width: $wrapper-max) {
+@media (min-width: $desktop) and (max-width: 1365px) {
   .hero__social {
-    left: 40px;
+    left: 0;
   }
 }
 
@@ -156,7 +157,16 @@
     width: 55%;
   }
 
+  .hero__social {
+    display: none;
+  }
+
   .hero__image {
     position: static;
+    min-width: 275px;
+    height: auto;
+    width: 100%;
+    padding: 0 0 0 35px;
+    object-position: initial;
   }
 }

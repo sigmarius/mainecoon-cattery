@@ -1,0 +1,165 @@
+.slider__buttons {
+  display: none;
+}
+
+.slider__list {
+  @include clear-list;
+
+  max-height: 530px;
+  margin-bottom: 11px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.slider__item {
+  &--first {
+    margin-bottom: 30px;
+    padding-left: 25px;
+  }
+
+  &--third img {
+    object-position: 0 -51px;
+  }
+}
+
+@media (min-width: $desktop) and (max-width: $wrapper) {
+  .slider__item--third {
+    width: 44%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .slider {
+    position: relative;
+    margin-bottom: 194px;
+  }
+
+  .slider__buttons {
+    position: absolute;
+    top: 223px;
+    width: 100%;
+    display: block;
+  }
+
+  .slider__button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--left {
+      left: 20px;
+    }
+
+    &--right {
+      right: 20px;
+    }
+
+    svg {
+      fill: none;
+      stroke: $brown-text;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $white;
+        stroke: none;
+      }
+    }
+
+    &:active {
+      svg {
+        fill: $brown-text;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .slider__list {
+    max-height: 100%;
+    padding-top: 145px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    transition: transform 0.6s ease;
+  }
+
+  .slider__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40%;
+
+    img {
+      min-height: 200px;
+      object-fit: cover;
+    }
+
+    &--first {
+      margin-bottom: 0;
+      margin-right: 20px;
+      padding-left: 0;
+    }
+
+    &--third {
+      top: 0;
+    }
+
+    &--active {
+      position: absolute;
+      left: 50%;
+      z-index: 1;
+      max-width: 530px;
+      width: 100%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .slider {
+    margin-bottom: 88vw;
+  }
+
+  .slider__buttons {
+    top: 102px;
+  }
+
+  .slider__button {
+    svg {
+      width: 8px;
+      height: 18px;
+    }
+
+    &--left {
+      left: 8px;
+    }
+
+    &--right {
+      right: 8px;
+    }
+  }
+
+  .slider__list {
+    padding-top: 0;
+  }
+
+  .slider__item {
+    display: none;
+
+    &--third img {
+      object-position: 6px -29px;
+    }
+
+    &--active {
+      width: 80%;
+    }
+  }
+
+  .slider__item.slider__item--active {
+    display: block;
+  }
+}

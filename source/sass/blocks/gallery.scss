@@ -74,6 +74,10 @@
 }
 
 @media (max-width: $mobile) {
+  .gallery {
+    min-height: 600px;
+  }
+
   .gallery__wrapper {
     padding-top: 52px;
 

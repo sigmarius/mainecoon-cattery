@@ -1,0 +1,311 @@
+.promo {
+  min-height: 905px;
+  margin-top: -1px;
+  background-color: $bg-light;
+}
+
+.promo__wrapper {
+  padding-top: 83px;
+  text-align: center;
+
+  h2 {
+    @include clear-content(20px);
+    @include font(36px, 42px);
+    @include head-font;
+    padding-left: 20px;
+  }
+
+  p {
+    @include font(16px, 26px);
+    width: 68%;
+    margin: 0 auto 40px;
+    font-weight: 300;
+    color: $brown-text;
+  }
+}
+
+.promo__image-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 87px;
+    left: 51.5%;
+    transform: translateX(-50%);
+
+    width: 519px;
+    height: 519px;
+
+    background-color: $bg-dark;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 32px;
+    left: 51.5%;
+    transform: translateX(-50%);
+
+    width: 631px;
+    height: 631px;
+
+    background-color: transparent;
+    border: 1px solid $brown-text;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.promo__image {
+  position: absolute;
+  top: -16px;
+  left: 54%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.promo__list {
+  @include clear-list;
+  position: absolute;
+  top: -16px;
+  left: 54%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.promo__item {
+  @include font(16px, 23px);
+  position: relative;
+  max-width: 250px;
+
+  font-weight: 300;
+  text-align: right;
+  color: $white;
+
+  &::after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: $brown-text;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--interaction {
+    @include font(14px, 21px);
+    top: 182px;
+    left: -450px;
+
+    &::after {
+      top: 9px;
+      right: -38px;
+    }
+  }
+
+  &--look {
+    top: 427px;
+    left: -467px;
+
+    &::after {
+      top: 8px;
+      right: -32px;
+    }
+  }
+
+  &--commands {
+    top: 206px;
+    left: 435px;
+    text-align: left;
+
+    &::after {
+      top: 3px;
+      left: -35px;
+      right: auto;
+    }
+  }
+
+  &--weight {
+    top: 379px;
+    left: 399px;
+    text-align: left;
+
+    &::after {
+      top: 6px;
+      left: -34px;
+      right: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop) and (max-width: 1200px) {
+  .promo__image-wrapper {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: $tablet) {
+  .promo__wrapper {
+    padding-top: 18px;
+
+    h2 {
+      padding-left: 0;
+    }
+
+    p {
+      width: 66%;
+    }
+  }
+
+  .promo__image-wrapper {
+    &::before {
+      top: 80px;
+      left: 50%;
+      width: 342px;
+      height: 348px;
+    }
+
+    &::after {
+      top: 43px;
+      left: 50%;
+      width: 416px;
+      height: 424px;
+    }
+  }
+
+  .promo__image {
+    top: 13px;
+    left: 52.5%;
+    width: 410px;
+  }
+
+  .promo__list {
+    left: 50%;
+  }
+
+  .promo__item {
+    max-width: 145px;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+    }
+
+    &--interaction {
+      top: 149px;
+      left: -268px;
+
+      &::after {
+        top: 5px;
+        right: -26px;
+      }
+    }
+
+    &--look {
+      top: 278px;
+      left: -277px;
+
+      &::after {
+        top: 4px;
+        right: -21px;
+      }
+    }
+
+    &--commands {
+      top: 91px;
+      left: 298px;
+
+      &::after {
+        left: -25px;
+      }
+    }
+
+    &--weight {
+      top: 145px;
+      left: 272px;
+
+      &::after {
+        left: -23px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .promo {
+    min-height: 820px;
+  }
+
+  .promo__wrapper {
+    padding-top: 38px;
+
+    h2 {
+      @include font(28px, 32px);
+      margin-bottom: 25px;
+      padding: 0 20px;
+    }
+
+    p {
+      @include font(14px, 20px);
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+
+  .promo__image-wrapper {
+    &::before {
+      top: 33px;
+      width: 230px;
+      height: 230px;
+    }
+
+    &::after {
+      top: 7px;
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  .promo__image {
+    top: -12px;
+    width: 275px;
+  }
+
+  .promo__list {
+    top: 323px;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+  }
+
+  .promo__item {
+    @include font(14px, 20px);
+    top: auto;
+    left: 33px;
+    max-width: 80%;
+    margin-bottom: 19px;
+    text-align: left;
+
+    &::after {
+      top: 4px;
+      left: -19px;
+    }
+
+    &--look {
+      padding-right: 31px;
+      order: 3;
+    }
+  }
+}
+
+@media (min-width: 350px) and (max-width: 767px) {
+  .promo__wrapper {
+    padding: 0 30px;
+  }
+
+  .promo__list {
+    width: 78%;
+  }
+}

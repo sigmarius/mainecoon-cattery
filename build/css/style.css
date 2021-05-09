@@ -1252,3 +1252,164 @@ a {
       margin-bottom: 5px; }
     .features__item:last-child {
       margin-bottom: 55px; } }
+
+.care {
+  min-height: 645px;
+  margin-top: -1px;
+  background-image: url("../img/care-bg@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -20px 0;
+  background-color: #1f1c1d; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .care {
+      background-image: url("../img/care-bg@2x.jpg"); } }
+
+.care__wrapper {
+  padding: 83px 0 0 0; }
+  .care__wrapper h2 {
+    font-family: "Yeseva One", "Georgia", "Book Antiqua", serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 48px;
+    padding: 0; }
+    @media (max-width: 767px) {
+      .care__wrapper h2 {
+        font-size: 28px;
+        line-height: 32px; } }
+
+.care__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.care__item {
+  position: relative;
+  width: 48%;
+  min-height: 165px;
+  margin-bottom: 43px;
+  padding: 38px 105px 0 50px;
+  border: 1px solid #a07b50; }
+  .care__item:nth-child(odd) {
+    margin-right: 45px;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .care__item h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #a07b50; }
+  .care__item p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff; }
+  .care__item--eyes {
+    padding-top: 30px; }
+
+.care__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #a07b50;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .care__link svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    stroke: #ffffff;
+    fill: #a07b50;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .care__link:hover, .care__link:focus {
+    background-color: #ffffff; }
+    .care__link:hover svg, .care__link:focus svg {
+      stroke: #a07b50;
+      fill: #ffffff; }
+  .care__link:active {
+    background-color: rgba(255, 255, 255, 0.2); }
+    .care__link:active svg {
+      fill: rgba(255, 255, 255, 0.2); }
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .care__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .care__item {
+    width: 45%; }
+    .care__item:nth-child(odd) {
+      margin-right: 20px; } }
+
+@media (max-width: 1023px) {
+  .care {
+    background-position: center center; }
+  .care__wrapper {
+    padding-top: 89px; }
+    .care__wrapper h2 {
+      margin-bottom: 37px; }
+  .care__list {
+    padding-left: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .care__item {
+    width: 74%;
+    margin-bottom: 28px;
+    padding: 36px 115px 0 45px;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .care__item:nth-child(odd) {
+      margin-right: 0; }
+    .care__item:last-child {
+      margin-bottom: 100px; }
+    .care__item--eyes {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+    .care__item--claws {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    .care__item--food {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; } }
+
+@media (max-width: 767px) {
+  .care__wrapper {
+    padding: 54px 15px 0; }
+    .care__wrapper h2 {
+      padding: 0 30px; }
+  .care__list {
+    padding-left: 0; }
+  .care__item {
+    width: 100%;
+    min-height: 150px;
+    padding: 19px 50px 0 26px; }
+    .care__item h3 {
+      font-size: 18px;
+      line-height: 21px; }
+    .care__item p {
+      line-height: 20px; }
+    .care__item--claws {
+      padding-right: 70px; }
+    .care__item:last-child {
+      margin-bottom: 62px; }
+  .care__link {
+    width: 45px; } }

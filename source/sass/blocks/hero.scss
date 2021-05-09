@@ -18,25 +18,25 @@
 
   h1 {
     @include clear-content(15px);
-    @include font(52px, 60px);
     @include head-font;
-  }
-
-  p,
-  span {
-    @include clear-content(0);
-    @include font(16px, 24px);
-    font-weight: 400;
+    @include font(52px, 60px);
+    text-align: left;
   }
 
   p {
+    @include clear-content(0);
+    @include font(16px, 24px);
     margin-bottom: 50px;
     padding-right: 20px;
+    font-weight: 400;
     color: $brown-text;
   }
 
   span {
+    @include clear-content(0);
+    @include font(16px, 24px);
     margin-bottom: 18px;
+    font-weight: 400;
     color: $brown-text;
     order: -1;
   }
@@ -136,6 +136,7 @@
     h1 {
       @include font(36px, 42px);
       margin-bottom: 15px;
+      text-align: center;
     }
 
     p,

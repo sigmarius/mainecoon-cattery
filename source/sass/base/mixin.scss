@@ -13,7 +13,28 @@
 @mixin head-font {
   font-family: $accent-font;
   font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
   color: $white;
+
+  @media (max-width: $mobile) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+@mixin lead-font {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: $brown-text;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @mixin font($font-size, $line-height) {

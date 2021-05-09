@@ -11,6 +11,8 @@
   color: $white;
   background-color: transparent;
   border: 0.5px solid $brown-text;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 
   &:hover,
   &:focus {

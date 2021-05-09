@@ -49,6 +49,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 
     &--left {
       left: 20px;

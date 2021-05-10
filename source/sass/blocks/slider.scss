@@ -1,5 +1,48 @@
+.slider {
+  position: relative;
+}
+
 .slider__buttons {
+  position: absolute;
+  top: 223px;
+  width: 100%;
   display: none;
+}
+
+.slider__button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &--left {
+    left: 20px;
+  }
+
+  &--right {
+    right: 20px;
+  }
+
+  svg {
+    fill: none;
+    stroke: $brown-text;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $white;
+      stroke: none;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $brown-text;
+      opacity: 0.6;
+    }
+  }
 }
 
 .slider__list {
@@ -33,51 +76,11 @@
 
 @media (max-width: $tablet) {
   .slider {
-    position: relative;
     margin-bottom: 194px;
   }
 
   .slider__buttons {
-    position: absolute;
-    top: 223px;
-    width: 100%;
     display: block;
-  }
-
-  .slider__button {
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-
-    &--left {
-      left: 20px;
-    }
-
-    &--right {
-      right: 20px;
-    }
-
-    svg {
-      fill: none;
-      stroke: $brown-text;
-    }
-
-    &:hover,
-    &:focus {
-      svg {
-        fill: $white;
-        stroke: none;
-      }
-    }
-
-    &:active {
-      svg {
-        fill: $brown-text;
-        opacity: 0.6;
-      }
-    }
   }
 
   .slider__list {

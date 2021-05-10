@@ -1,0 +1,288 @@
+.team {
+  min-height: 695px;
+  margin-top: -1px;
+  background-color: $bg-dark;
+}
+
+.team__wrapper {
+  padding-top: 84px;
+
+  h2 {
+    @include clear-content(20px);
+    @include head-font;
+  }
+
+  p {
+    @include lead-font;
+    width: 45%;
+    margin: 0 auto 20px;
+  }
+}
+
+.team__slider-buttons {
+  top: 185px;
+  display: block;
+
+  .slider__button--left {
+    left: -48px;
+  }
+
+  .slider__button--right {
+    right: -47px;
+  }
+}
+
+.team__slider-item {
+  padding-right: 40px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.team__figure {
+  position: relative;
+
+  width: 62%;
+  min-height: 400px;
+  margin: 0 0 0 auto;
+  padding: 93px 125px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $bg-dark;
+  border: 1px solid $border-line;
+
+  &::before {
+    position: absolute;
+    top: 24px;
+    left: 27px;
+
+    width: 91%;
+    height: 90%;
+
+    background-color: $bg-light;
+    content: "";
+  }
+
+  figcaption {
+    z-index: 1;
+
+    h3 {
+      @include clear-content(7px);
+      @include font(24px, 28px);
+      font-weight: 500;
+      color: $brown-text;
+    }
+
+    p {
+      @include clear-content(23px);
+      @include font(16px, 22px);
+      font-weight: 400;
+      text-align: left;
+      color: $brown-text;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 2px;
+    left: -312px;
+    width: 360px;
+    height: 356px;
+    object-fit: cover;
+  }
+
+  blockquote {
+    @include clear-content(44px);
+    @include font(16px, 25px);
+    z-index: 1;
+    color: $light-opacity;
+  }
+}
+
+.team__social {
+  z-index: 1;
+
+  li {
+    margin-right: 9px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $desktop) and (max-width: 1240px) {
+  .team__slider-buttons {
+    .slider__button--left {
+      left: 50px;
+    }
+
+    .slider__button--right {
+      right: 20px;
+    }
+  }
+
+  .team__figure {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: $tablet) {
+  .team {
+    min-height: 830px;
+  }
+
+  .team__wrapper {
+    padding: 84px 45px 0;
+
+    h2 {
+      margin-bottom: 23px;
+    }
+
+    p {
+      width: 75%;
+      margin-bottom: 25px;
+    }
+  }
+
+  .team__slider-list {
+    padding-top: 0;
+  }
+
+  .team__slider-buttons {
+    top: 475px;
+
+    .slider__button--left {
+      left: 335px;
+    }
+
+    .slider__button--right {
+      left: 615px;
+      right: auto;
+    }
+  }
+
+  .team__slider-item {
+    padding-right: 28px;
+  }
+
+  .team__figure {
+    padding: 93px 120px 0 131px;
+
+    &::before {
+      width: 92%;
+      height: 88%;
+    }
+
+    width: 100%;
+    min-height: 411px;
+
+    img {
+      top: 295px;
+      left: 385px;
+      width: 208px;
+      height: 208px;
+    }
+
+    blockquote {
+      margin-bottom: 49px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .team {
+    min-height: auto;
+  }
+
+  .team__wrapper {
+    padding: 54px 10px 0;
+
+    p {
+      width: 90%;
+    }
+  }
+
+  .team__slider {
+    margin-bottom: 0;
+  }
+
+  .team__slider-buttons {
+    top: 60px;
+    left: 50%;
+    z-index: 1;
+    width: 100px;
+    transform: translateX(-50%);
+
+    .slider__button {
+      z-index: 2;
+    }
+
+    .slider__button--left {
+      left: -43px;
+    }
+
+    .slider__button--right {
+      left: 124px;
+      right: auto;
+    }
+  }
+
+  .team__slider-list {
+    margin-bottom: 0;
+  }
+
+  .team__slider-item {
+    padding-right: 0;
+  }
+
+  .team__figure {
+    padding: 155px 0 30px;
+    text-align: center;
+    border: none;
+
+    &::before {
+      top: 71px;
+      left: 5px;
+      width: 98%;
+      height: 67%;
+    }
+
+    figcaption {
+      h3 {
+        @include font(18px, 21px);
+        margin-bottom: 5px;
+      }
+
+      p {
+        @include font(14px, 19px);
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0 20px;
+        text-align: center;
+      }
+    }
+
+    img {
+      left: 50%;
+      top: 8px;
+      width: 126px;
+      height: 126px;
+      transform: translateX(-50%);
+    }
+
+    blockquote {
+      @include font(14px, 20px);
+      margin-bottom: 20px;
+      padding: 0 5px;
+    }
+  }
+
+  .team__social {
+    justify-content: center;
+  }
+}

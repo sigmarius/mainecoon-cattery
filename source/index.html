@@ -85,21 +85,23 @@
 
         <ul class="gallery__tabs-content">
           <li class="gallery__tabs-item gallery__tabs-item--active">
-            <div class="slider">
+            <div class="gallery__slider slider">
               <div class="slider__buttons">
-                <button class="slider__button slider__button--left" type="button" aria-label="flipping back">
+                <button class="slider__button slider__button--left gallery__button-left" type="button"
+                  aria-label="Листать назад">
                   <svg width="15" height="31">
                     <use xlink:href="#icon-arrow-left"></use>
                   </svg>
                 </button>
-                <button class="slider__button slider__button--right" type="button" aria-label="flipping forward">
+                <button class="slider__button slider__button--right gallery__button-right" type="button"
+                  aria-label="Листать вперед">
                   <svg width="15" height="31">
                     <use xlink:href="#icon-arrow-right"></use>
                   </svg>
                 </button>
               </div>
               <ul class="slider__list">
-                <li class="slider__item slider__item--first">
+                <li class="slider__item slider__item--first gallery__slider-item">
                   <picture>
                     <!-- 1x: 519px; 2x: 1038px -->
                     <source srcset="img/gallery-cat-1@1x.webp 1x, img/gallery-cat-1@2x.webp 2x" type="image/webp" />
@@ -108,7 +110,7 @@
                       alt="Пушистый красавчик Мейн-Кун" />
                   </picture>
                 </li>
-                <li class="slider__item slider__item--second">
+                <li class="slider__item slider__item--second gallery__slider-item">
                   <picture>
                     <!-- 1x: 535px; 2x: 1070px -->
                     <source srcset="img/gallery-cat-2@1x.webp 1x, img/gallery-cat-2@2x.webp 2x" type="image/webp" />
@@ -117,7 +119,7 @@
                       alt="Пушистый красавчик Мейн-Кун" />
                   </picture>
                 </li>
-                <li class="slider__item slider__item--third slider__item--active">
+                <li class="slider__item slider__item--third gallery__slider-item slider__item--active">
                   <picture>
                     <!-- 1x: 530px; 2x: 1060px -->
                     <source srcset="img/gallery-cat-3@1x.webp 1x, img/gallery-cat-3@2x.webp 2x" type="image/webp" />
@@ -231,6 +233,115 @@
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="team__wrapper wrapper">
+        <h2>Наша команда</h2>
+        <p>Все сотрудники нашего питомника дипломированые специалисты
+          в&nbsp;области фелинологии и ветеринарии</p>
+        <div class="team__slider slider">
+          <div class="slider__buttons team__slider-buttons">
+            <button class="slider__button slider__button--left team__button-left" type="button"
+              aria-label="Листать назад">
+              <svg width="15" height="31">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="slider__button slider__button--right team__button-right" type="button"
+              aria-label="Листать вперед">
+              <svg width="15" height="31">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="slider__list team__slider-list">
+            <li class="team__slider-item team__slider-item--active">
+              <figure class="team__figure">
+                <figcaption>
+                  <h3>Серёжа Попов</h3>
+                  <p>Основатель питомника</p>
+                </figcaption>
+                <picture>
+                  <!-- 1x: 360px; 2x: 720px -->
+                  <source srcset="img/sergey-popov@1x.webp 1x, img/sergey-popov@2x.webp 2x" type="image/webp" />
+                  <!-- 1x: 360px; 2x: 728px -->
+                  <img src="img/sergey-popov@1x.jpg" srcset="img/sergey-popov@2x.jpg 2x" width="360" height="356"
+                    alt="Основатель питомника Серёжа Попов" />
+                </picture>
+                <blockquote>Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет. Мы&nbsp;в&nbsp;ответе
+                  за каждого
+                  приобретенного вами&nbsp;питомца
+                </blockquote>
+                <ul class="team__social social">
+                  <li>
+                    <a class="team__social-link social__link" href="#" aria-label="Мы в Фейсбуке">
+                      <svg width="7" height="15">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="team__social-link social__link" href="#" aria-label="Мы в Твитере">
+                      <svg width="20" height="15">
+                        <use xlink:href="#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="team__social-link social__link" href="#" aria-label="Мы в Контакте">
+                      <svg width="21" height="12">
+                        <use xlink:href="#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </figure>
+            </li>
+            <li class="team__slider-item">
+              <figure class="team__figure">
+                <figcaption>
+                  <h3>Тугарин Змей</h3>
+                  <p>Основатель питомника</p>
+                </figcaption>
+                <picture>
+                  <!-- 1x: 360px; 2x: 720px -->
+                  <source srcset="img/gallery-cat-2@1x.webp 1x, img/gallery-cat-2@2x.webp 2x" type="image/webp" />
+                  <!-- 1x: 360px; 2x: 728px -->
+                  <img src="img/gallery-cat-2@1x.png" srcset="img/gallery-cat-2@2x.png 2x" width="360" height="356"
+                    alt="Основатель питомника Серёжа Попов" />
+                </picture>
+                <blockquote>Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет. Мы в ответе за каждого
+                  приобретенного вами питомца
+                </blockquote>
+                <ul class="team__social social">
+                  <li>
+                    <a class="team__social-link social__link" href="#" aria-label="Мы в Фейсбуке">
+                      <svg width="7" height="15">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="team__social-link social__link" href="#" aria-label="Мы в Твитере">
+                      <svg width="20" height="15">
+                        <use xlink:href="#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="team__social-link social__link" href="#" aria-label="Мы в Контакте">
+                      <svg width="21" height="12">
+                        <use xlink:href="#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 

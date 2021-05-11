@@ -16,39 +16,6 @@
 
   var slideIndex = 1; // начальный индекс слайда по умолчанию
 
-  // if (slides) {
-  //   var slidesArray = Array.from(slides);
-
-  //   var showSlides = function (n) {
-  //     if (n > slidesArray.length) {
-  //       slideIndex = 1;
-  //     }
-
-  //     if (n < 1) {
-  //       slideIndex = slidesArray.length;
-  //     }
-
-  //     slidesArray.forEach(function (item) {
-  //       item.classList.remove('slider__item--active');
-  //     });
-
-  //     slidesArray[slideIndex - 1].classList.add('slider__item--active');
-  //   };
-  // }
-
-  // if (buttonLeft) {
-  //   buttonLeft.addEventListener('click', function () {
-  //     showSlides(slideIndex -= 1);
-  //   });
-  // }
-
-  // if (buttonRight) {
-  //   buttonRight.addEventListener('click', function () {
-  //     showSlides(slideIndex += 1);
-  //   });
-  // }
-
-
   var showSlides = function (n, arr, style) {
     var slidesArray = Array.from(arr);
 
@@ -77,8 +44,12 @@
     });
   };
 
-  setButtonsHandler(galleryButtonLeft, galleryButtonRight, gallerySlides, 'slider__item--active');
+  if (gallerySlides && galleryButtonLeft && galleryButtonRight) {
+    setButtonsHandler(galleryButtonLeft, galleryButtonRight, gallerySlides, 'slider__item--active');
+  }
 
-  setButtonsHandler(teamButtonLeft, teamButtonRight, teamSlides, 'team__slider-item--active');
+  if (teamSlides && teamButtonLeft && teamButtonRight) {
+    setButtonsHandler(teamButtonLeft, teamButtonRight, teamSlides, 'team__slider-item--active');
+  }
 
 })();

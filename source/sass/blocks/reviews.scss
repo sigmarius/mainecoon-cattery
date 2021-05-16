@@ -178,7 +178,6 @@
   .reviews__figure {
     padding: 241px 87px 0 122px;
     justify-content: space-between;
-    align-items: center;
 
     &::before {
       top: 92px;
@@ -275,7 +274,6 @@
     }
 
     blockquote {
-      max-width: 81%;
       margin-bottom: 19px;
       padding: 0;
       line-height: 20px;

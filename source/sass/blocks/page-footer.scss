@@ -1,0 +1,171 @@
+.page-footer {
+  margin-top: -1px;
+  background-color: $bg-dark;
+}
+
+.page-footer__wrapper {
+  min-height: 157px;
+  padding: 10px 164px 0 135px;
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__logo {
+  svg {
+    fill: $brown-text;
+    stroke: $bg-light;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $opacity-white;
+    }
+  }
+}
+
+.page-footer__social {
+  margin-left: 128px;
+  padding-top: 10px;
+
+  li {
+    margin-right: 9px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__social-link {
+  svg {
+    fill: $brown-text;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $opacity-white;
+    }
+  }
+}
+
+.page-footer__addres {
+  @include font(14px, 27px);
+  margin-left: 153px;
+  font-weight: 400;
+  color: $addres-color;
+
+  p {
+    @include clear-content(0);
+  }
+}
+
+.page-footer__phone {
+  @include font(14px, 27px);
+  margin-left: auto;
+  padding-top: 5px;
+  font-weight: 700;
+  color: $phone-color;
+  transition: all 0.5s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $brown-text;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $light-opacity;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $desktop) and (max-width: 1100px) {
+  .page-footer__addres {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page-footer__wrapper {
+    min-height: 107px;
+    padding: 0 45px 10px 54px;
+  }
+
+  .page-footer__logo {
+    display: none;
+  }
+
+  .page-footer__social {
+    margin-left: 0;
+  }
+
+  .page-footer__addres {
+    margin-left: 130px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-footer__wrapper {
+    padding: 30px 28px 36px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-footer__logo {
+    display: block;
+    order: 3;
+
+    svg {
+      width: 56px;
+      height: 25px;
+    }
+  }
+
+  .page-footer__social {
+    margin: 0 0 20px;
+    order: 2;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+
+  .page-footer__social-link {
+    &--twit svg {
+      width: 22px;
+      height: 16px;
+    }
+
+    &--vk svg {
+      width: 25px;
+      height: 14px;
+    }
+  }
+
+  .page-footer__addres {
+    margin-left: 0;
+    order: 0;
+  }
+
+  .page-footer__phone {
+    margin: 0 0 6px;
+
+    order: 1;
+  }
+}

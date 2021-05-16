@@ -1,13 +1,4 @@
 'use strict';
-// утилитарный модуль - экспортирует общие функции и переменные для всех модулей
-(function () {
-    window.utils = {
-        KeyCode: {
-            BACKSPACE: 'Backspace',
-            ESCAPE: 'Escape'
-        }
-    };
-}());
 // аккордеон для блока FAQ
 (function () {
     var faqList = document.querySelector('.faq__list');

@@ -5,19 +5,19 @@
 (function () {
 
   // gallery Slider
-  var gallerySlides = document.querySelectorAll('.gallery__slider-item');
-  var galleryButtonLeft = document.querySelector('.gallery__button-left');
-  var galleryButtonRight = document.querySelector('.gallery__button-right');
+  var gallerySlider = document.querySelector('.gallery__slider');
 
   // team Slider
-  var teamSlides = document.querySelectorAll('.team__slider-item');
-  var teamButtonLeft = document.querySelector('.team__button-left');
-  var teamButtonRight = document.querySelector('.team__button-right');
+  var teamSlider = document.querySelector('.team__slider');
+
+  // reviews Slider
+  var reviewsSlider = document.querySelector('.reviews__slider');
 
   var slideIndex = 1; // начальный индекс слайда по умолчанию
 
-  var showSlides = function (n, arr, style) {
-    var slidesArray = Array.from(arr);
+  var showSlides = function (n, elem, style) {
+    var slides = elem.querySelectorAll('.slider__item');
+    var slidesArray = Array.from(slides);
 
     if (n > slidesArray.length) {
       slideIndex = 1;
@@ -34,22 +34,28 @@
     slidesArray[slideIndex - 1].classList.add(style);
   };
 
-  var setButtonsHandler = function (leftButton, rightButton, arr, style) {
+  var setButtonsHandler = function (arr, style) {
+    var leftButton = arr.querySelector('.slider__button--left');
     leftButton.addEventListener('click', function () {
       showSlides((slideIndex -= 1), arr, style);
     });
 
+    var rightButton = arr.querySelector('.slider__button--right');
     rightButton.addEventListener('click', function () {
       showSlides((slideIndex += 1), arr, style);
     });
   };
 
-  if (gallerySlides && galleryButtonLeft && galleryButtonRight) {
-    setButtonsHandler(galleryButtonLeft, galleryButtonRight, gallerySlides, 'slider__item--active');
+  if (gallerySlider) {
+    setButtonsHandler(gallerySlider, 'slider__item--active');
   }
 
-  if (teamSlides && teamButtonLeft && teamButtonRight) {
-    setButtonsHandler(teamButtonLeft, teamButtonRight, teamSlides, 'team__slider-item--active');
+  if (teamSlider) {
+    setButtonsHandler(teamSlider, 'team__slider-item--active');
+  }
+
+  if (reviewsSlider) {
+    setButtonsHandler(reviewsSlider, 'reviews__slider-item--active');
   }
 
 })();

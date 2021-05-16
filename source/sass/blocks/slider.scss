@@ -98,7 +98,7 @@
     flex-basis: 40%;
 
     img {
-      min-height: 200px;
+      height: 200px;
       object-fit: cover;
     }
 
@@ -114,11 +114,18 @@
 
     &--active {
       position: absolute;
+      top: 0;
       left: 50%;
       z-index: 1;
       max-width: 530px;
       width: 100%;
       transform: translateX(-50%);
+
+      img {
+        width: 530px;
+        height: 540px;
+        object-position: center -42px;
+      }
     }
   }
 }

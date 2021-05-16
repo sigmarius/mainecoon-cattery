@@ -35,6 +35,9 @@
 .team__slider-item {
   padding-right: 40px;
   display: none;
+  flex-basis: auto;
+  flex-shrink: unset;
+  flex-grow: unset;
 
   &--active {
     display: block;
@@ -149,48 +152,6 @@
 
   .team__slider-item {
     padding-right: 0;
-  }
-
-  .team__figure {
-    padding: 155px 0 30px;
-    text-align: center;
-    border: none;
-
-    &::before {
-      top: 71px;
-      left: 5px;
-      width: 98%;
-      height: 67%;
-    }
-
-    figcaption {
-      h3 {
-        @include font(18px, 21px);
-        margin-bottom: 5px;
-      }
-
-      p {
-        @include font(14px, 19px);
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 0 20px;
-        text-align: center;
-      }
-    }
-
-    img {
-      left: 50%;
-      top: 8px;
-      width: 126px;
-      height: 126px;
-      transform: translateX(-50%);
-    }
-
-    blockquote {
-      @include font(14px, 20px);
-      margin-bottom: 20px;
-      padding: 0 5px;
-    }
   }
 
   .team__social {

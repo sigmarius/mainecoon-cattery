@@ -257,7 +257,7 @@
             </button>
           </div>
           <ul class="slider__list team__slider-list">
-            <li class="team__slider-item team__slider-item--active">
+            <li class="slider__item team__slider-item team__slider-item--active">
               <figure class="team__figure person">
                 <figcaption>
                   <h3>Серёжа Попов</h3>
@@ -299,7 +299,7 @@
                 </ul>
               </figure>
             </li>
-            <li class="team__slider-item">
+            <li class="slider__item team__slider-item">
               <figure class="team__figure person">
                 <figcaption>
                   <h3>Тугарин Змей</h3>
@@ -413,41 +413,105 @@
     <section class="reviews">
       <div class="reviews__wrapper wrapper">
         <h2>Отзывы</h2>
-        <figure class="reviews__figure person">
-          <figcaption>
-            <h3>Серёжа Попов</h3>
-          </figcaption>
-          <picture>
-            <!-- 1x: 360px; 2x: 720px -->
-            <source srcset="img/sergey-popov-big@1x.webp 1x, img/sergey-popov-big@2x.webp 2x" type="image/webp" />
-            <!-- 1x: 360px; 2x: 728px -->
-            <img src="img/sergey-popov-big@1x.jpg" srcset="img/sergey-popov-big@2x.jpg 2x" width="480" height="331"
-              alt="Серёжа Попов" />
-          </picture>
-          <blockquote>Я выражаю огромную благодарность вашему&nbsp;питомнику.&nbsp;Мой&nbsp;Феликс&nbsp;невероятно
-            умен&nbsp;и&nbsp;воспитан.&nbsp;Огромным&nbsp;плюсом&nbsp;питомника
-            является&nbsp;возможность&nbsp;консультироваться&nbsp;в&nbsp;любое время
-          </blockquote>
-          <div class="reviews__details">
-            <time datetime="2021-06-08">08 июня 2021</time>
-            <ul class="reviews__social social">
-              <li>
-                <a class="reviews__social-link social__link" href="#" aria-label="Мы в Твитере">
-                  <svg width="14" height="10">
-                    <use xlink:href="#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a class="reviews__social-link social__link" href="#" aria-label="Мы в Контакте">
-                  <svg width="13" height="8">
-                    <use xlink:href="#icon-vk"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+        <div class="reviews__slider slider">
+          <div class="slider__buttons reviews__slider-buttons">
+            <button class="slider__button slider__button--left reviews__button reviews__button--left" type="button"
+              aria-label="Листать назад">
+              <svg class="reviews__icon reviews__icon--tablet" width="60" height="18">
+                <use xlink:href="#icon-long-arrow"></use>
+              </svg>
+              <svg class="reviews__icon reviews__icon--mobile" width="15" height="31">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="slider__button slider__button--right reviews__button reviews__button--right" type="button"
+              aria-label="Листать вперед">
+              <svg class="reviews__icon reviews__icon--tablet" width="60" height="18">
+                <use xlink:href="#icon-long-arrow"></use>
+              </svg>
+              <svg class="reviews__icon reviews__icon--mobile" width="15" height="31">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
           </div>
-        </figure>
+
+          <ul class="slider__list reviews__slider-list">
+            <li class="slider__item reviews__slider-item reviews__slider-item--active">
+              <figure class="reviews__figure person">
+                <figcaption>
+                  <h3>Серёжа Попов</h3>
+                </figcaption>
+                <picture>
+                  <!-- 1x: 360px; 2x: 720px -->
+                  <source srcset="img/sergey-popov-big@1x.webp 1x, img/sergey-popov-big@2x.webp 2x" type="image/webp" />
+                  <!-- 1x: 360px; 2x: 728px -->
+                  <img src="img/sergey-popov-big@1x.jpg" srcset="img/sergey-popov-big@2x.jpg 2x" width="480"
+                    height="331" alt="Серёжа Попов" />
+                </picture>
+                <blockquote>Я выражаю огромную благодарность вашему питомнику. Мой Феликс невероятно
+                  умен и&nbsp;воспитан. Огромным плюсом питомника
+                  является возможность консультироваться в любое время
+                </blockquote>
+                <div class="reviews__details">
+                  <time datetime="2021-06-08">08 июня 2021</time>
+                  <ul class="reviews__social social">
+                    <li>
+                      <a class="reviews__social-link social__link" href="#" aria-label="Мы в Твитере">
+                        <svg width="14" height="10">
+                          <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="reviews__social-link social__link" href="#" aria-label="Мы в Контакте">
+                        <svg width="13" height="8">
+                          <use xlink:href="#icon-vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </li>
+            <li class="slider__item reviews__slider-item">
+              <figure class="reviews__figure person">
+                <figcaption>
+                  <h3>Тугарин Змей</h3>
+                </figcaption>
+                <picture>
+                  <!-- 1x: 480px; 2x: 960px -->
+                  <source srcset="img/gallery-cat-1@1x.webp 1x, img/gallery-cat-1@2x.webp 2x" type="image/webp" />
+                  <!-- 1x: 480px; 2x: 960px -->
+                  <img src="img/gallery-cat-1@1x.png" srcset="img/gallery-cat-1@2x.png 2x" width="480" height="331"
+                    alt="Тугарин Змей" />
+                </picture>
+                <blockquote>Я выражаю огромную благодарность вашему питомнику. Мой Феликс невероятно
+                  умен и&nbsp;воспитан. Огромным плюсом питомника
+                  является возможность консультироваться в любое время
+                </blockquote>
+                <div class="reviews__details">
+                  <time datetime="2021-06-08">08 июня 2021</time>
+                  <ul class="reviews__social social">
+                    <li>
+                      <a class="reviews__social-link social__link" href="#" aria-label="Мы в Твитере">
+                        <svg width="14" height="10">
+                          <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="reviews__social-link social__link" href="#" aria-label="Мы в Контакте">
+                        <svg width="13" height="8">
+                          <use xlink:href="#icon-vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>

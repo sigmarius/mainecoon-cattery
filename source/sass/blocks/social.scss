@@ -6,6 +6,7 @@
 .social__link {
   svg {
     fill: $white;
+    transition: all 0.5s ease-in-out;
   }
 
   &:hover,

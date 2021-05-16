@@ -728,6 +728,14 @@ a {
   .gallery__tabs-menu input[type="radio"]:checked + label {
     color: #ffffff; }
 
+.gallery__tabs-item {
+  display: none; }
+  .gallery__tabs-item--active {
+    display: block; }
+  .gallery__tabs-item p {
+    font-size: 28px;
+    line-height: 60px; }
+
 .gallery__tabs-content {
   padding: 0;
   margin: 0;

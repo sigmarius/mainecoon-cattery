@@ -57,7 +57,7 @@ gulp.task("vendor-scripts", function() {
 });
 
 gulp.task("main-scripts", function() {
-  return gulp.src(["!source/js/vendor/**/*", "source/js/utils.js", "source/js/*.js"])
+  return gulp.src(["!source/js/vendor/**/*", "source/js/*.js"])
     .pipe(concat("main.js"))
     .pipe(removeUseStrict())
     .pipe(gulp.dest("build/js"));

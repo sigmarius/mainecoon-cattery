@@ -22,23 +22,6 @@
         });
     }
 }());
-// мобильное меню - начиная с планшетной версии
-(function () {
-    var pageHeader = document.querySelector('.page-header');
-    var headerToggle = document.querySelector('.page-header__toggle');
-    if (pageHeader && headerToggle) {
-        pageHeader.classList.remove('page-header--nojs');
-        headerToggle.addEventListener('click', function () {
-            if (pageHeader.classList.contains('page-header--closed')) {
-                pageHeader.classList.remove('page-header--closed');
-                pageHeader.classList.add('page-header--opened');
-            } else {
-                pageHeader.classList.add('page-header--closed');
-                pageHeader.classList.remove('page-header--opened');
-            }
-        });
-    }
-}());
 // слайдер изображений для секции gallery
 (function () {
     // gallery Slider
@@ -81,5 +64,22 @@
     }
     if (reviewsSlider) {
         setButtonsHandler(reviewsSlider, 'reviews__slider-item--active');
+    }
+}());
+// табы для секции с Галереей
+(function () {
+    var tabLinks = document.querySelectorAll('.gallery__tabs-menu label');
+    var tabItems = document.querySelectorAll('.gallery__tabs-item');
+    var linksArray = Array.from(tabLinks);
+    if (linksArray && tabItems) {
+        for (var i = 0; i < linksArray.length; i++) {
+            linksArray[i].addEventListener('click', function (evt) {
+                for (var j = 0; j < tabItems.length; j++) {
+                    tabItems[j].classList.remove('gallery__tabs-item--active');
+                }
+                var index = linksArray.indexOf(evt.target);
+                tabItems[index].classList.add('gallery__tabs-item--active');
+            });
+        }
     }
 }());

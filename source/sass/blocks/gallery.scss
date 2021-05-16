@@ -51,6 +51,18 @@
   }
 }
 
+.gallery__tabs-item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  p {
+    @include font(28px, 60px);
+  }
+}
+
 .gallery__tabs-content {
   @include clear-list;
 }
